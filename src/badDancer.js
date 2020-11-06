@@ -11,5 +11,5 @@ BadDancer.prototype.step = function() {
 
   // invoke step so that it properly refers to dancer.step
   Dancer.prototype.step.call(this); // ->
-  this.$node.toggle();
+  this.$node.fadeIn('slow');
 };

@@ -31,3 +31,6 @@ $(document).ready(function() {
   // end of blinky dancer append function
 }); // ends document.ready function
 
+//$('.addLineUpButton').on('click', function(event) {
+//  make the dancers lineUp
+//};

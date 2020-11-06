@@ -6,7 +6,6 @@ var Dancer = function(top, left, timeBetweenSteps) {
   console.log('this = ', this);
   console.log('name = ', (this.__proto__.constructor.name));
   //`${this.name}`
-
   this.$node = $(`<span class="${this.__proto__.constructor.name}"></span>`);
   this.step();
   this.setPosition(top, left);
@@ -34,3 +33,10 @@ Dancer.prototype.setPosition = function(top, left) {
   };
   this.$node.css(styleSettings);
 };
+
+//Dancer.prototype.lineUp = function() {
+//this.$node.css(styleSettings) = {
+//   top: ???
+//   left: ??? we need to make each dancer have a different number
+//   }
+// };
