@@ -3,7 +3,11 @@ var Dancer = function(top, left, timeBetweenSteps) {
   this.timeBetweenSteps = timeBetweenSteps;
   this.top = top;
   this.left = left;
-  this.$node = $('<span class="dancer"></span>');
+  console.log('this = ', this);
+  console.log('name = ', (this.__proto__.constructor.name));
+  //`${this.name}`
+
+  this.$node = $(`<span class="${this.__proto__.constructor.name}"></span>`);
   this.step();
   this.setPosition(top, left);
 };
@@ -30,8 +34,3 @@ Dancer.prototype.setPosition = function(top, left) {
   };
   this.$node.css(styleSettings);
 };
-
-
-// invoked setpostion WITHIN the constructor function immeditately after it was defined
-
-// invoked setpostion WITHIN the constructor function immeditately after it was defined

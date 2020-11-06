@@ -1,7 +1,6 @@
 var BadDancer = function (top, left, timeBetweenSteps) {
   Dancer.call(this, top, left, timeBetweenSteps);
 
-
 };
 
 BadDancer.prototype = Object.create(Dancer.prototype);
