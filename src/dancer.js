@@ -34,8 +34,8 @@ Dancer.prototype.setPosition = function(top, left) {
   this.$node.css(styleSettings);
 };
 
-//Dancer.prototype.lineUp = function() {
-//this.$node.css(styleSettings) = {
+// Dancer.prototype.lineUp = function() {
+//   this.$node.css(styleSettings) = {
 //   top: ???
 //   left: ??? we need to make each dancer have a different number
 //   }
