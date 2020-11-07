@@ -75,34 +75,20 @@ $(document).ready(function() {
 
       var style = {
         border: '10px solid red'
-
       };
       firstDancer.$node.css(style);
       closestDancer.$node.css(style);
+      //closestDancer.$node.css = style;
+
 
       console.log(firstDancerSelector);
       //firstDancer
 
       //closestDancer
     };
-
     doStuff();
 
     // in here
   });
   // end of blinky dancer append function
 }); // ends document.ready function
-
-
-
-// function pythagorean(sideA, sideB){
-//   return Math.sqrt(Math.pow(sideA, 2) + Math.pow(sideB, 2));
-// }
-
-
-//compare with window.dancers[0]
-// loop through window.dancers starting at [1]
-  // run pythagorean theorem every element
-  // compare top and left of [0] with every other element
-// find the the closest element to [0]
-// have them interact. maybe have them move closer together

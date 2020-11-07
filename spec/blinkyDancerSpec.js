@@ -14,7 +14,6 @@ describe('blinkyDancer', function() {
 
   it('should have a step function that makes its node blink', function() {
     sinon.spy(blinkyDancer.$node, 'toggle');
-    debugger;
     blinkyDancer.step();
     expect(blinkyDancer.$node.toggle.called).to.be.true;
   });
@@ -31,5 +30,39 @@ describe('blinkyDancer', function() {
       clock.tick(timeBetweenSteps);
       expect(blinkyDancer.step.callCount).to.be.equal(2);
     });
+  });
+});
+
+
+describe('badDancer', function() {
+
+  var blinkyDancer, clock;
+  var timeBetweenSteps = 100;
+
+  beforeEach(function() {
+    clock = sinon.useFakeTimers();
+    badDancer = new BadDancer(10, 20, timeBetweenSteps);
+  });
+
+  it('Bad dancer should have a "hoverOver" function', function() {
+    sinon.spy(badDancer.$node, 'hover');
+    expect(badDancer.$node.hover);
+  });
+});
+
+
+describe('goodDancer', function() {
+
+  var blinkyDancer, clock;
+  var timeBetweenSteps = 100;
+
+  beforeEach(function() {
+    clock = sinon.useFakeTimers();
+    badDancer = new BadDancer(10, 20, timeBetweenSteps);
+  });
+
+  it('Bad dancer should have a "hoverOver" function', function() {
+    sinon.spy(badDancer.$node, 'hover');
+    expect(badDancer.$node.hover);
   });
 });
