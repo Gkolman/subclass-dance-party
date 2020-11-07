@@ -39,6 +39,10 @@ body, a:link, a:visited, a:active{
   position:absolute;
 } */
 
+.BlinkyDancer:hover, .GoodDancer:hover, .BadDancer:hover {
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRFOxzCDwS2lyV0X9DEDs_-WeTMhr9_gv78ew&usqp=CAU)
+}
+
 .BlinkyDancer{
   border:10px solid red;
   border-radius:10px;
