@@ -1,5 +1,7 @@
 body, html{
   height:100%;
+  background: url(animations/coyotebar.png)
+
 }
 body{
   margin: 0px;
@@ -10,6 +12,11 @@ body, a:link, a:visited, a:active{
   color: lightblue;
 }
 .title, .addDancerButton{
+  padding:5px 12px;
+  float:right;
+}
+
+.addLineUpButton {
   padding:5px 12px;
   float:right;
 }
