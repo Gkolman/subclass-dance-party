@@ -5,7 +5,7 @@ body, html{
 }
 body{
   margin: 0px;
-  background-color:#444;
+  /* background-color:#444; */
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{
@@ -20,6 +20,12 @@ body, a:link, a:visited, a:active{
   padding:5px 12px;
   float:right;
 }
+
+.addInteractButton {
+  padding:5px 12px;
+  float:right;
+}
+
 .topbar{
   height:32px;
   background-color: #555;
@@ -40,7 +46,20 @@ body, a:link, a:visited, a:active{
 } */
 
 .BlinkyDancer:hover, .GoodDancer:hover, .BadDancer:hover {
-  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRFOxzCDwS2lyV0X9DEDs_-WeTMhr9_gv78ew&usqp=CAU)
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRFOxzCDwS2lyV0X9DEDs_-WeTMhr9_gv78ew&usqp=CAU);
+  animation-name: spin;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes spin {
+  from {
+      transform:rotate(0deg);
+  }
+  to {
+      transform:rotate(360deg);
+  }
 }
 
 .BlinkyDancer{
@@ -80,34 +99,3 @@ body, a:link, a:visited, a:active{
   width: 220px;
   background: url(animations/dancingbaby.gif);
 }
-
-
-/* .BadDancer {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 600px;
-  height: 300px;
-  background: url(animations/monster.png);
-  animation: monster 1s steps(13) infinite;
- };
- @keyframes monster
-{
-  from {
-    background-position: 0px;
-  }
-  to {
-    background-position: 8528px;
-  }
-} */
-
-
-/* Monster - width = 8528 height = 536  - number of frames = 13
-
-Dog - width = 6342 height  = 205   - number of frames = 21
-
-Bat - width = 5225 height  = 470  - number of frames = 11
- */
-
-

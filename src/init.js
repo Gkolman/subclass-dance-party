@@ -42,12 +42,63 @@ $(document).ready(function() {
       currentDancer.$node.css(styleSettings);
     }
   });
+
+  $('.addInteractButton').on('click', function(event) {
+    var firstDancer = window.dancers[0];
+    var firstDancerPosition = window.dancers[0].left;
+
+    var closestDancer = null;
+    var closestPoint = null;
+    var closestDistance = null;
+
+
+    for (var i = 1; i < window.dancers.length; i++ ) {
+      var dancer = window.dancers[i];
+      if (closestDancer === null) {
+        closestDancer = dancer;
+        closestPoint = dancer.left;
+        closestDistance = Math.abs(dancer.left - firstDancer.left);
+      } else {
+
+        var comparison = Math.abs(firstDancer.left - dancer.left);
+        if (comparison < closestDistance) {
+          closestDistance = comparison;
+          closestDancer = dancer;
+        }
+      }
+    }
+
+    var doStuff = function() {
+      console.log('firstDancer = ', firstDancer);
+      console.log('closestDancer = ', closestDancer);
+      var firstDancerSelector = firstDancer.$node;
+
+      var style = {
+        border: '10px solid red'
+
+      };
+      firstDancer.$node.css(style);
+      closestDancer.$node.css(style);
+
+      console.log(firstDancerSelector);
+      //firstDancer
+
+      //closestDancer
+    };
+
+    doStuff();
+
+    // in here
+  });
   // end of blinky dancer append function
 }); // ends document.ready function
+
+
 
 // function pythagorean(sideA, sideB){
 //   return Math.sqrt(Math.pow(sideA, 2) + Math.pow(sideB, 2));
 // }
+
 
 //compare with window.dancers[0]
 // loop through window.dancers starting at [1]
